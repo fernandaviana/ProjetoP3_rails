@@ -1,4 +1,7 @@
 Prova2::Application.routes.draw do
+  resources :turmis
+
+
   resources :telefones
 
 

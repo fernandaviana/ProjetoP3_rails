@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Aluno:</b>
+  <%= @turmi.aluno.nomealuno %>
+</p>
+
+<p>
+  <b>Disciplinaprofessor:</b>
+  <%= @turmi.disciplinaprofessor.ano %>
+</p>
+
+
+<%= link_to 'Editar', edit_turmi_path(@turmi) %> |
+<%= link_to 'Voltar', turmis_path %>
