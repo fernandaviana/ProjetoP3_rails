@@ -1,14 +1,80 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Prova2</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Sistema Modelo</title>
+
+<%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :application %>
+  <%= csrf_meta_tag %>
+
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+
+<link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css" />
+<link href="http://fonts.googleapis.com/css?family=Coda:400,800" rel="stylesheet" type="text/css" />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+
+
 </head>
 <body>
+<div id="menu-wrapper">
+	<div id="menu">
+		<ul>
+			<li class="current_page_item"><a href="alunos">Aluno</a></li>
+			<li><a href="telefones">Telefone</a></li>
+			<li><a href="tipotelefones">Tip/Tel</a></li>
+			<li><a href="discipĺinas">Disciplinas</a></li>
+			<li><a href="professors">Professor</a></li>
+			<li><a href="disciplinaprofessors">Dis/Prof</a></li>
+                        <li><a href="turmis">Turma</a></li>
 
-<%= yield %>
+		</ul>
+	</div>
+	<!-- end #menu --> 
+</div>
+<div id="header-wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1>SISTEMA MODELO DE ENSINO</h1>
+			
+		</div>
+	</div>
+</div>
+<div id="wrapper"> 
+	<!-- end #header -->
+	<div id="page-bgtop"></div>
+	<div id="page">
+		<div><img src="images/pics01.jpg" width="920" height="300" alt="" /></div>
+		<div id="content">
+			<div class="post">
+						</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+              <%= yield %> 	
+</div>
 
+
+
+
+
+	<div id="page-bgbtm"></div>
+
+     
+	<!-- end #page --> 
+</div>
+
+<!-- end #footer -->
 </body>
 </html>
+
+
+
+
