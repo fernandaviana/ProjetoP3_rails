@@ -1,0 +1,29 @@
+<h1>Lista de telefones</h1>
+
+<table>
+  <tr>
+    <th>Ddd</th>
+    <th>Numerotelefone</th>
+    <th>Aluno</th>
+    <th>Tipotelefone</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @telefones.each do |telefone| %>
+  <tr>
+    <td><%= telefone.ddd %></td>
+    <td><%= telefone.numerotelefone %></td>
+    <td><%= telefone.aluno %></td>
+    <td><%= telefone.tipotelefone %></td>
+    <td><%= link_to 'Mostrar', telefone %></td>
+    <td><%= link_to 'Editar', edit_telefone_path(telefone) %></td>
+    <td><%= link_to 'Excluir', telefone, method: :delete, data: { confirm: 'Você tem certeza ?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Novo Telefone', new_telefone_path %>

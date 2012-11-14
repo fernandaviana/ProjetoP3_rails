@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121114102456) do
+ActiveRecord::Schema.define(:version => 20121114114218) do
 
   create_table "alunos", :force => true do |t|
     t.string   "matricula"
@@ -48,6 +48,18 @@ ActiveRecord::Schema.define(:version => 20121114102456) do
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
+
+  create_table "telefones", :force => true do |t|
+    t.string   "ddd"
+    t.string   "numerotelefone"
+    t.integer  "aluno_id"
+    t.integer  "tipotelefone_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "telefones", ["aluno_id"], :name => "index_telefones_on_aluno_id"
+  add_index "telefones", ["tipotelefone_id"], :name => "index_telefones_on_tipotelefone_id"
 
   create_table "tipotelefones", :force => true do |t|
     t.string   "descricao"
