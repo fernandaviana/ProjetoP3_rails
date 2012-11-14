@@ -1,4 +1,7 @@
 Prova2::Application.routes.draw do
+  resources :disciplinas
+
+
   resources :tipotelefones
 
 
