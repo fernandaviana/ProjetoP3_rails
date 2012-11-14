@@ -1,0 +1,29 @@
+<h1>Listas disciplina professores</h1>
+
+<table>
+  <tr>
+    <th>Ano</th>
+    <th>Periodo</th>
+    <th>Disciplina</th>
+    <th>Professor</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @disciplinaprofessors.each do |disciplinaprofessor| %>
+  <tr>
+    <td><%= disciplinaprofessor.ano %></td>
+    <td><%= disciplinaprofessor.periodo %></td>
+    <td><%= disciplinaprofessor.disciplina %></td>
+    <td><%= disciplinaprofessor.professor %></td>
+    <td><%= link_to 'Mostrar', disciplinaprofessor %></td>
+    <td><%= link_to 'Editar', edit_disciplinaprofessor_path(disciplinaprofessor) %></td>
+    <td><%= link_to 'Excluir', disciplinaprofessor, method: :delete, data: { confirm: 'Você tem certeza?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Disciplinaprofessor', new_disciplinaprofessor_path %>

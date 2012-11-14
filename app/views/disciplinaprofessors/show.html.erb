@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ano:</b>
+  <%= @disciplinaprofessor.ano %>
+</p>
+
+<p>
+  <b>Periodo:</b>
+  <%= @disciplinaprofessor.periodo %>
+</p>
+
+<p>
+  <b>Disciplina:</b>
+  <%= @disciplinaprofessor.disciplina.nomedisciplina %>
+</p>
+
+<p>
+  <b>Professor:</b>
+  <%= @disciplinaprofessor.professor.nomeprofessor %>
+</p>
+
+
+<%= link_to 'Editar', edit_disciplinaprofessor_path(@disciplinaprofessor) %> |
+<%= link_to 'Voltar', disciplinaprofessors_path %>
